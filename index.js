@@ -4,6 +4,7 @@ fetchUserBtn.addEventListener('click', fetchUser);
 async function fetchUser(){
     let response=await fetch('https://reqres.in/api/users')
     let res=await response.json();
+    console.log(res.data)
     displayUsers(res.data)
 }
 function displayUsers(users){
